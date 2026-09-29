@@ -1,7 +1,39 @@
-# Digital Contact Book
-# Uses basic Python concepts only
-
 contacts = []
+file_name = "contacts.txt"
+
+
+def load_contacts():
+    try:
+        file = open(file_name, "r")
+
+        for line in file:
+            data = line.strip().split("|")
+
+            if len(data) == 3:
+                contact = {
+                    "name": data[0],
+                    "phone": data[1],
+                    "email": data[2]
+                }
+                contacts.append(contact)
+
+        file.close()
+
+    except FileNotFoundError:
+        pass
+
+
+def save_contacts():
+    file = open(file_name, "w")
+
+    for contact in contacts:
+        file.write(
+            contact["name"] + "|" +
+            contact["phone"] + "|" +
+            contact["email"] + "\n"
+        )
+
+    file.close()
 
 
 def add_contact():
@@ -15,7 +47,6 @@ def add_contact():
         print("Name and phone number are required.")
         return
 
-    # Check whether the phone number already exists
     for contact in contacts:
         if contact["phone"] == phone:
             print("This phone number already exists.")
@@ -28,6 +59,7 @@ def add_contact():
     }
 
     contacts.append(contact)
+    save_contacts()
     print("Contact added successfully!")
 
 
@@ -85,6 +117,7 @@ def update_contact():
             if new_email != "":
                 contact["email"] = new_email
 
+            save_contacts()
             print("Contact updated successfully!")
             return
 
@@ -99,6 +132,7 @@ def delete_contact():
     for contact in contacts:
         if contact["phone"] == phone:
             contacts.remove(contact)
+            save_contacts()
             print("Contact deleted successfully!")
             return
 
@@ -106,6 +140,8 @@ def delete_contact():
 
 
 def main():
+    load_contacts()
+
     while True:
         print("\n===== DIGITAL CONTACT BOOK =====")
         print("1. Add Contact")
