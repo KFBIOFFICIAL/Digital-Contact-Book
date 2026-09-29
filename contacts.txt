@@ -1,5 +1,5 @@
 Subom Paul|7827837288|subom@subom.com
-Khan Farhan|8210836517|teamx979@gmail.com
+Khan Farhan Bin Irfan`|821086679|kfbi@gmail.com
 Aarav Sharma|9876543210|aarav@gmail.com
 Riya Verma|8765432109|riya@gmail.com
 Aditya Singh|7654321098|aditya@gmail.com
@@ -8,10 +8,8 @@ Rahul Gupta|8432167890|rahul@gmail.com
 Ananya Kapoor|9321456780|ananya@gmail.com
 Arjun Patel|8192736450|arjun@gmail.com
 Sneha Joshi|9081726354|sneha@gmail.com
-Rohan Malhotra|7987654321|rohan@gmail.com
 Neha Sharma|8877665544|neha@gmail.com
 Vivek Kumar|7766554433|vivek@gmail.com
-Simran Kaur|9654321870|simran@gmail.com
 Yash Agarwal|8543210967|yash@gmail.com
 Meera Nair|9432108765|meera@gmail.com
 MS Bharani|5838485839|bharani@bham.co
